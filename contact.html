@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Peach's Stump Grinding</title>
+  <meta name="description" content="Request an estimate for stump grinding in Waterford, MI and surrounding areas." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="nav">
+        <div class="brand">
+          <strong data-biz>Peach's Stump Grinding</strong>
+          <span><span data-location></span> • <span data-radius></span>-mile radius</span>
+        </div>
+        <nav class="navlinks">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="grid cols-2">
+          <div class="card">
+            <div class="kicker">Get in touch</div>
+            <h1 style="margin:10px 0 6px">Request an estimate</h1>
+            <p class="sub">Send a message with the stump count/size and photos if you can. The more detail up front, the faster we can schedule.</p>
+
+            <div class="card" style="margin-top:14px">
+              <div class="iconrow">
+                <div class="iconbox">
+                  <strong>Phone</strong>
+                  <span><a data-phone href="#">(000) 000-0000</a></span>
+                </div>
+                <div class="iconbox">
+                  <strong>Text</strong>
+                  <span><a data-sms href="#">(000) 000-0000</a></span>
+                </div>
+                <div class="iconbox">
+                  <strong>Email</strong>
+                  <span><a data-email href="#">hello@peachsstumpgrinding.com</a></span>
+                </div>
+              </div>
+              <p class="note" style="margin-top:10px">(These are placeholders — we’ll plug in the real contact info when you’re ready.)</p>
+            </div>
+
+            <div class="card" style="margin-top:14px">
+              <div class="kicker">Hours</div>
+              <div style="margin-top:8px"><strong data-hours></strong></div>
+              <div class="note" data-hours-note></div>
+              <div class="note" style="margin-top:8px">Based in <span data-location></span>.</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="kicker">Contact form</div>
+            <h2 style="margin:10px 0 6px">Send details</h2>
+            <p class="note">This form is wired for <strong>Netlify Forms</strong> (no extra backend). Once deployed to Netlify, submissions will show up in your Netlify dashboard.</p>
+
+            <form class="form" name="estimate" method="POST" data-netlify="true" action="/thanks.html">
+              <input type="hidden" name="form-name" value="estimate" />
+              <input class="input" name="name" placeholder="Your name" required />
+              <input class="input" name="phone" placeholder="Phone number" required />
+              <input class="input" name="address" placeholder="Job address (or city)" />
+              <textarea class="input" name="details" placeholder="How many stumps? Approx diameter? Any tight access/gates? Do you want chips left or removed?" required></textarea>
+              <button class="btn primary" type="submit">Send request</button>
+            </form>
+
+            <div class="card" style="margin-top:14px">
+              <div class="kicker">Pro tip</div>
+              <p class="note" style="margin:10px 0 0">Customers who text 2–3 photos + stump diameter (or a tape measure in the shot) get faster quotes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>© <span id="y"></span> <span data-biz></span></div>
+      <small class="note">We’ll add final contact details and a working form once you choose hosting.</small>
+    </div>
+  </footer>
+
+  <script src="site.config.js"></script>
+  <script src="shared.js"></script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>

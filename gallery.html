@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery | Peach's Stump Grinding</title>
+  <meta name="description" content="Gallery of stump grinding and cleanup work (placeholder images for now)." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="nav">
+        <div class="brand">
+          <strong data-biz>Peach's Stump Grinding</strong>
+          <span><span data-location></span> • <span data-radius></span>-mile radius</span>
+        </div>
+        <nav class="navlinks">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="card">
+          <div class="kicker">Gallery</div>
+          <h1 style="margin:10px 0 6px">Project examples</h1>
+          <p class="sub">These are generic placeholder images. Once you start collecting before/after photos, we’ll replace these with your real work (which will look way better).</p>
+
+          <div class="gallery" style="margin-top:16px">
+            <div class="gimg"><img alt="Placeholder" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=70" /><div class="gcap">Wooded lot cleanup</div></div>
+            <div class="gimg"><img alt="Placeholder" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=70" /><div class="gcap">Backyard work area</div></div>
+            <div class="gimg"><img alt="Placeholder" src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1600&q=70" /><div class="gcap">Large stump near fence</div></div>
+            <div class="gimg"><img alt="Placeholder" src="https://images.unsplash.com/photo-1614963326505-843f38f5561f?auto=format&fit=crop&w=1600&q=70" /><div class="gcap">Stump grinding in progress</div></div>
+            <div class="gimg"><img alt="Placeholder" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=70" /><div class="gcap">Yard restoration</div></div>
+            <div class="gimg"><img alt="Placeholder" src="https://images.unsplash.com/photo-1523978591478-c753949ff840?auto=format&fit=crop&w=1600&q=70" /><div class="gcap">Clean finish area</div></div>
+          </div>
+
+          <div class="splitActions" style="margin-top:18px">
+            <a class="btn primary" href="contact.html">Request an estimate</a>
+            <a class="btn" href="services.html">Services & FAQs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>© <span id="y"></span> <span data-biz></span></div>
+      <small class="note">Tip: before/after shots taken from the same angle sell this service better than anything else.</small>
+    </div>
+  </footer>
+
+  <script src="site.config.js"></script>
+  <script src="shared.js"></script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>

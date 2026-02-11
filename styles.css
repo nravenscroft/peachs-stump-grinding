@@ -1,0 +1,160 @@
+/* Peach's Stump Grinding — earthy palette */
+:root{
+  --bg: #0b120d;           /* deep forest */
+  --panel: #0f1a12;        /* forest shade */
+  --text: #f3f2ea;         /* warm off-white */
+  --muted: #c8c1ae;        /* warm sand */
+  --accent: #6ea86f;       /* sage green */
+  --accent2: #a8794f;      /* bark brown */
+  --accent3: #d3b37a;      /* tan highlight */
+  --border: rgba(243,242,234,.14);
+  --shadow: 0 12px 30px rgba(0,0,0,.35);
+  --radius: 18px;
+  --max: 1120px;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  background: radial-gradient(1200px 800px at 20% -10%, rgba(110,168,111,.22), transparent 60%),
+              radial-gradient(900px 700px at 90% 10%, rgba(168,121,79,.20), transparent 55%),
+              var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+}
+
+a{color:inherit}
+.container{max-width:var(--max); margin:0 auto; padding:0 20px}
+
+/* Header */
+.header{
+  position: sticky; top: 0; z-index: 20;
+  backdrop-filter: blur(10px);
+  background: rgba(11,18,13,.72);
+  border-bottom: 1px solid var(--border);
+}
+.nav{
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 14px 0;
+  gap: 14px;
+}
+.brand{
+  display:flex; flex-direction:column;
+}
+.brand strong{font-size: 16px; letter-spacing:.2px}
+.brand span{font-size: 12px; color: var(--muted)}
+
+.navlinks{display:flex; gap: 14px; flex-wrap:wrap; align-items:center; justify-content:flex-end}
+.navlinks a{
+  text-decoration:none;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  color: var(--muted);
+}
+.navlinks a:hover{border-color: var(--border); color: var(--text)}
+.navlinks a.active{color: var(--text); border-color: rgba(110,168,111,.35)}
+
+/* Buttons */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  text-decoration:none;
+  background: rgba(15,26,18,.65);
+}
+.btn:hover{transform: translateY(-1px); transition: .18s ease; box-shadow: var(--shadow)}
+.btn.primary{
+  background: linear-gradient(135deg, rgba(110,168,111,.95), rgba(110,168,111,.65));
+  border-color: rgba(110,168,111,.55);
+  color: #08110a;
+  font-weight: 700;
+}
+.btn.secondary{
+  background: linear-gradient(135deg, rgba(168,121,79,.85), rgba(168,121,79,.55));
+  border-color: rgba(168,121,79,.55);
+  color: #120b06;
+  font-weight: 700;
+}
+
+/* Sections */
+.section{padding: 54px 0}
+.grid{display:grid; gap: 18px}
+.grid.cols-2{grid-template-columns: 1.15fr .85fr}
+@media (max-width: 880px){
+  .grid.cols-2{grid-template-columns: 1fr}
+}
+
+.card{
+  background: rgba(15,26,18,.75);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  padding: 18px;
+}
+
+.kicker{color: var(--accent3); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: 12px}
+.h1{font-size: 44px; line-height: 1.08; margin: 10px 0 10px}
+@media (max-width: 520px){.h1{font-size: 36px}}
+.sub{color: var(--muted); font-size: 16px; max-width: 58ch}
+
+.hero{
+  padding: 42px 0 18px;
+}
+.heroPanel{
+  overflow:hidden;
+  border-radius: calc(var(--radius) + 8px);
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(135deg, rgba(15,26,18,.78), rgba(15,26,18,.45)),
+    url('https://images.unsplash.com/photo-1617093727343-374698c01a89?auto=format&fit=crop&w=1600&q=70');
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow);
+}
+.heroInner{padding: 34px}
+
+.badges{display:flex; gap:10px; flex-wrap:wrap; margin-top: 16px}
+.badge{font-size: 12px; color: var(--muted); padding: 8px 10px; border: 1px solid var(--border); border-radius: 999px; background: rgba(11,18,13,.45)}
+
+.splitActions{display:flex; gap: 12px; flex-wrap:wrap; margin-top: 18px}
+
+.list{margin: 10px 0 0; padding-left: 18px; color: var(--muted)}
+
+.iconrow{display:flex; gap: 14px; flex-wrap:wrap}
+.iconbox{flex: 1 1 220px; padding: 14px; border-radius: 16px; border: 1px solid var(--border); background: rgba(11,18,13,.35)}
+.iconbox strong{display:block}
+.iconbox span{color: var(--muted); font-size: 13px}
+
+.gallery{display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px}
+@media (max-width: 900px){.gallery{grid-template-columns: repeat(2, 1fr)}}
+@media (max-width: 520px){.gallery{grid-template-columns: 1fr}}
+.gimg{border-radius: 16px; overflow:hidden; border: 1px solid var(--border); background: rgba(11,18,13,.35)}
+.gimg img{width:100%; height: 210px; object-fit: cover; display:block}
+.gcap{padding: 10px 12px; color: var(--muted); font-size: 13px}
+
+.footer{
+  padding: 26px 0;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  background: rgba(11,18,13,.6);
+}
+.footer small{display:block; margin-top: 6px}
+
+.form{
+  display:grid; gap: 12px;
+}
+.input{
+  width:100%;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(11,18,13,.45);
+  color: var(--text);
+}
+textarea.input{min-height: 120px; resize: vertical}
+
+.note{font-size: 13px; color: var(--muted)}
