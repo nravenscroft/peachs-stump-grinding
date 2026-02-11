@@ -58,7 +58,7 @@ a{color:inherit}
 .brand span{font-size: 12px; color: var(--muted)}
 
 .footerBrand{display:flex; align-items:center; gap: 10px; flex-wrap:wrap}
-.footerLogo{width: 34px; height: 34px; padding: 0; border-radius: 12px; border: none; background: transparent; object-fit: contain; filter: drop-shadow(0 8px 18px rgba(0,0,0,.35))}
+.footerLogo{width: 102px; height: 102px; padding: 0; border-radius: 16px; border: none; background: transparent; object-fit: contain; filter: drop-shadow(0 10px 22px rgba(0,0,0,.35))}
 
 .navlinks{display:flex; gap: 14px; flex-wrap:wrap; align-items:center; justify-content:flex-end}
 .navlinks a{
