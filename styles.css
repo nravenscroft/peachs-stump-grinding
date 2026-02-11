@@ -62,7 +62,11 @@ a{color:inherit}
 .brand span{font-size: 12px; color: var(--muted)}
 
 .footerBrand{display:flex; align-items:center; gap: 10px; flex-wrap:wrap}
-.footerLogo{width: 102px; height: 102px; padding: 0; border-radius: 16px; border: none; background: transparent; object-fit: contain; filter: drop-shadow(0 10px 22px rgba(0,0,0,.35))}
+.footerLogo{width: 306px; height: 306px; padding: 0; border-radius: 18px; border: none; background: transparent; object-fit: contain; filter: drop-shadow(0 12px 26px rgba(0,0,0,.35))}
+
+@media (max-width: 520px){
+  .footerLogo{width: 190px; height: 190px}
+}
 
 .navlinks{display:flex; gap: 14px; flex-wrap:wrap; align-items:center; justify-content:flex-end}
 .navlinks a{
