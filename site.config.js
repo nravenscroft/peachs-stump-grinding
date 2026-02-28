@@ -4,8 +4,8 @@ window.PSG_CONFIG = {
   tagline: "Fast, clean stump grinding — we come to you",
   location: "Waterford, MI 48328",
   radiusMiles: 30,
-  phone: "(248) 462-6225",
-  sms: "(248) 462-6225",
+  phone: "(248) 210-9019",
+  sms: "(248) 210-9019",
   email: "peachstumps@gmail.com",
   hours: {
     days: "Every day",
