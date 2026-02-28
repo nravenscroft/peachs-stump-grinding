@@ -69,6 +69,7 @@ a{color:inherit}
 }
 
 .navlinks{display:flex; gap: 14px; flex-wrap:wrap; align-items:center; justify-content:flex-end}
+.navlinks .navCta{padding: 10px 12px; border-radius: 12px; white-space: nowrap}
 .navlinks a{
   text-decoration:none;
   padding: 8px 10px;

@@ -8,11 +8,21 @@ function applyConfig(){
   document.querySelectorAll('[data-hours]').forEach(el=>el.textContent = `${cfg.hours.days}: ${cfg.hours.time}`);
   document.querySelectorAll('[data-hours-note]').forEach(el=>el.textContent = cfg.hours.note);
 
-  // Phone/SMS placeholders
+  // Phone placeholders
+  const phoneDigits = String(cfg.phone || '').replace(/\D/g, '');
+  const phoneTel = phoneDigits ? `tel:${phoneDigits}` : `tel:${cfg.phone}`;
+
   const phoneEls = document.querySelectorAll('[data-phone]');
   phoneEls.forEach(el=>{
     el.textContent = cfg.phone;
-    if(el.tagName.toLowerCase()==='a') el.href = `tel:${cfg.phone}`;
+    if(el.tagName.toLowerCase()==='a') el.href = phoneTel;
+  });
+
+  // Phone CTA (e.g., header button)
+  const phoneCtaEls = document.querySelectorAll('[data-phone-cta]');
+  phoneCtaEls.forEach(el=>{
+    el.textContent = `Call ${cfg.phone}`;
+    if(el.tagName.toLowerCase()==='a') el.href = phoneTel;
   });
   const smsEls = document.querySelectorAll('[data-sms]');
   smsEls.forEach(el=>{
